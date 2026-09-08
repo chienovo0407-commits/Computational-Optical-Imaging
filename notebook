@@ -1,13 +1,23 @@
-|先验约束（Prior constraint）：
-  稀疏：
-  TV：
-  低秩：
+|先验约束(Prior constraint)：
+  稀疏(Sparse Prior)：认为信号中大部分为0
+  TV Prior(Total Variation)：认为图像局部平滑(常用于去噪)
+  低秩(Low Rank Prior)：认为视频很多帧高度相关
+  非局部先验(Non-local Prior)：认为远距离相似patch也有关系
 
-|快照压缩成像（SCI，Snapshot Compressive Imaging）：
+|快照压缩成像(SCI，Snapshot Compressive Imaging)：
   使用二维传感器在一次曝光中采集高维信息，通过算法重建高维信息
 
-|编码孔径快照光谱成像（CASSI，Coded Aperture Snapshot Spectral Imaging）：
+|编码孔径快照光谱成像(CASSI，Coded Aperture Snapshot Spectral Imaging)：
   scene -> mask(coded) -> disperser -> Camera -> Measurement 
 
-|编码空间压缩时间成像（CACTI，Coded Aperture Compressive Temporal Imaging）：
+|编码空间压缩时间成像(CACTI，Coded Aperture Compressive Temporal Imaging)：
   
+|广义交替投影算法(GAP，Generalized Alternating Projection):
+  核心思想就是两件事，第一，数据一致性，使结果满足 Y=U*X ；第二，满足先验约束,例如TV去噪。
+
+|交替方向乘子法(ADMM，Alternating Direction Method of Multipliers):
+  解决 min{f(x)+g(z)} 两个变量不好一起优化的问题，故拆开分别优化。例如SCI：min||Y-UX||^2 + lambda*R(X)，拆成数据x和先验z，更新x -> 更新z -> 更新约束 -> 重复
+
+|迭代软阈值算法(ISTA,Iterative Shrinkage Thresholding Algorithm):
+  
+|快速迭代软阈值算法(FISTA):
