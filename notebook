@@ -2,3 +2,12 @@
   稀疏：
   TV：
   低秩：
+
+|快照压缩成像（SCI，Snapshot Compressive Imaging）：
+  使用二维传感器在一次曝光中采集高维信息，通过算法重建高维信息
+
+|编码孔径快照光谱成像（CASSI，Coded Aperture Snapshot Spectral Imaging）：
+  scene -> mask(coded) -> disperser -> Camera -> Measurement 
+
+|编码空间压缩时间成像（CACTI，Coded Aperture Compressive Temporal Imaging）：
+  
