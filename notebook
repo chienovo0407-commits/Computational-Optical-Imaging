@@ -4,6 +4,10 @@
   低秩(Low Rank Prior)：认为视频很多帧高度相关
   非局部先验(Non-local Prior)：认为远距离相似patch也有关系
 
+|范数：
+  L1范数--绝对值总和
+  L2范数--欧氏距离
+
 |快照压缩成像(SCI，Snapshot Compressive Imaging)：
   使用二维传感器在一次曝光中采集高维信息，通过算法重建高维信息
 
