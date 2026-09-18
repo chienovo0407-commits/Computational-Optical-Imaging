@@ -26,3 +26,9 @@
   数据一致性+稀疏先验
   
 |快速迭代软阈值算法(FISTA):
+
+|半二次分裂算法(HQS,HalfQuadraticSplitting):
+  解决的问题与ADMM相同，但是使用惩罚项 u/2*||x-z||^2 来逼近约束
+
+|(MST,Mask-guided Spectral-wise Transformer)：
+  
